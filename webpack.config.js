@@ -1,5 +1,7 @@
 const path = require('path')
-
+function resolve(pathname) {
+    path.resolve(__dirname, pathname);
+}
 const {
     VueLoaderPlugin
 } = require('vue-loader');
@@ -34,6 +36,12 @@ module.exports = {
                 loader: 'file-loader',
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            'vue': 'vue/dist/vue.esm.js',
+        }
     },
     plugins: [
         new VueLoaderPlugin()
