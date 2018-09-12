@@ -9,6 +9,7 @@ const {
 module.exports = {
     entry: {
         'music': "./music.js",
+        'web': "./web.js",
     },
     output: {
         //生产的文件夹为当前目录下的dist文件夹
